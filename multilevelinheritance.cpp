@@ -1,0 +1,37 @@
+// Multilevel Inheritance
+#include<iostream>
+using namespace std;
+
+// base class
+class Vehicle
+{
+public:
+	Vehicle()
+	{
+	cout << "This is a Vehicle.....base class\n";
+	}
+};
+
+// first sub_class derived from class vehicle
+class fourWheeler: public Vehicle
+{ public:
+	fourWheeler()
+	{
+	cout << "Objects with 4 wheels are vehicles...sub class\n";
+	}
+};
+// sub class derived from the derived base class fourWheeler
+class Car: public fourWheeler {
+public:
+	Car()
+	{
+	cout << "Car has 4 Wheels....sub class of fourwheeler\n";
+	}
+};
+
+int main()
+{
+	
+	Car obj;
+	return 0;
+}
